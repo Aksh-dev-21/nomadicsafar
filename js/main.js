@@ -118,7 +118,7 @@
   }
 
   function redirectToWhatsApp() {
-    var phoneNumber = '9768575182'; // Replace with the actual phone number
+    var phoneNumber = '8454088171'; // Replace with the actual phone number
     var message = 'Hello, I would like to get more information.'; // Optional: Pre-filled message
     
     var url = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(message);

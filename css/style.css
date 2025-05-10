@@ -498,27 +498,23 @@
   }
 
     .text-container span {
-      /* margin-bottom: 20px; Adjust this value as needed */
-
-      margin-bottom: 16px; /* Slightly less spacing */
-  font-size: 18px; /* Reduce from default fs-4 (approx. 1.5rem or 24px) */
-      
+      margin-bottom: 20px; /* Adjust this value as needed */
     }
 
 
     .text i {
-        font-size: 24px; /* Icon size */
+        font-size: 30px; /* Icon size */
         color: #FFD700; /* Yellow color for the icons */
       }
       
       /* Optional: Add some responsiveness */
       @media (max-width: 768px) {
         .text-container {
-          font-size: 16px; /* Slightly smaller text on smaller screens */
+          font-size: 20px; /* Slightly smaller text on smaller screens */
         }
       
         .text i {
-          font-size: 20px; /* Slightly smaller icons */
+          font-size: 24px; /* Slightly smaller icons */
         }
       }
       
