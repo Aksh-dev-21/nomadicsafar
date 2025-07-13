@@ -69,28 +69,54 @@
 
 
   // Testimonials carousel
-  $(".testimonial-carousel").owlCarousel({
-    autoplay: true,
-    smartSpeed: 1000,
-    center: true,
-    margin: 24,
-    dots: true,
-    loop: true,
-    nav: false,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      },
-      992: {
-        items: 3
-      }
-    }
-  });
+  $(document).ready(function() {
+      $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        center: true,
+        margin: 24,
+        dots: true,
+        loop: true,
+        nav: false,
+        autoplayTimeout: 5000, // set to 3 seconds for smoother transitions
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          992: {
+            items: 3
+          }
+        }
+      });
+    });
+  })(jQuery);
 
-})(jQuery);
+//   $(".testimonial-carousel").owlCarousel({
+//     autoplay: true,
+//     center: true,
+//     margin: 24,
+//     dots: true,
+//     loop: true,
+//     nav: false,
+//     autoplayTimeout: 1000,
+//     autoplayHoverPause: true,
+//     responsive: {
+//       0: {
+//         items: 1
+//       },
+//       768: {
+//         items: 2
+//       },
+//       992: {
+//         items: 3
+//       }
+//     }
+//   });
+
+// })(jQuery);
 
 
 //   function downloadPDF(event, fileIdentifier) {
@@ -172,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // More package details
-function showDialog(title, imageSrc, description, price, departures, highlights, inclusions, exclusions) {
+function showDialog(title, imageSrc, description,whytrival, price, departures, choose,ideal, travel,stay,meals,activities, exclusions) {
   document.getElementById('dialog-title').innerText = title;
   document.getElementById('dialog-image').src = imageSrc;
 
@@ -180,7 +206,7 @@ function showDialog(title, imageSrc, description, price, departures, highlights,
   function populateList(id, value) {
     const ul = document.getElementById(id);
     ul.innerHTML = '';
-    const items = value.split('.');
+    const items = value.split('|');
     items.forEach(item => {
       const trimmed = item.trim();
       if (trimmed) {
@@ -193,10 +219,15 @@ function showDialog(title, imageSrc, description, price, departures, highlights,
 
   // Set all list-based content
   populateList('dialog-description', description);
+  populateList('dialog-why-travel', whytrival);
   populateList('dialog-price', price);
   populateList('dialog-departures', departures);
-  populateList('dialog-highlights', highlights);
-  populateList('dialog-inclusions', inclusions);
+  populateList('dialog-choose', choose);
+  populateList('dialog-ideal', ideal);
+  populateList('dialog-travel', travel);
+  populateList('dialog-stay', stay);
+  populateList('dialog-meals', meals);
+  populateList('dialog-activities', activities);
   populateList('dialog-exclusions', exclusions);
 
   // Show dialog
