@@ -77,7 +77,7 @@
         dots: true,
         loop: true,
         nav: false,
-        autoplayTimeout: 5000, // set to 3 seconds for smoother transitions
+        autoplayTimeout: 3000, // set to 3 seconds for smoother transitions
         autoplayHoverPause: true,
         responsive: {
           0: {
