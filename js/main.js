@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // More package details
-function showDialog(title, imageSrc, description,whytrival, price, departures, choose,ideal, travel,stay,meals,activities, exclusions) {
+function showDialog(title, imageSrc, description,whytrival, price, departures, choose,ideal, travel,stay,meals,additional,activities, exclusions) {
   document.getElementById('dialog-title').innerText = title;
   document.getElementById('dialog-image').src = imageSrc;
 
@@ -227,6 +227,7 @@ function showDialog(title, imageSrc, description,whytrival, price, departures, c
   populateList('dialog-travel', travel);
   populateList('dialog-stay', stay);
   populateList('dialog-meals', meals);
+  populateList('dialog-additional', additional);
   populateList('dialog-activities', activities);
   populateList('dialog-exclusions', exclusions);
 
